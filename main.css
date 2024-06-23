@@ -1,0 +1,125 @@
+#product-overview {
+    background: linear-gradient(to bottom, rgb(239, 52, 186), transparent),
+        url(images/freedom.jpg) left 10% top 28% / cover no-repeat border-box,
+        #da620d;
+    /* background-size: cover;
+    background-position: left 10% top 30%;
+    background-origin: border-box; */
+    padding: 2px;
+    height: 70vh;
+}
+
+.plans__all {
+    text-align: center;
+}
+
+.plan {
+    background-color: #d5ffdc;
+    display: inline-block;
+    text-align: center;
+    width: 20%;
+    padding: 0.8rem;
+    margin: 0.5rem;
+    vertical-align: middle;
+}
+
+.plan__title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #0c6b2a;
+}
+
+.plan__price {
+    color: rgb(96, 96, 97);
+}
+
+.plan__features {
+    list-style: none;
+    padding: 0px;
+}
+
+.plan__features li {
+    margin: 0.5rem 0px;
+}
+
+.plan__annotation {
+    font-size: 1.4rem;
+    width: 60%;
+    display: inline-block;
+    background-color: white;
+    color: #19b84c;
+    padding: 0.2rem;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 7px;
+    margin: 0.3rem;
+}
+
+.plan--highlighted {
+    background-color: #19b84c;
+    color: white;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.plan--highlighted .plan__title {
+    color: white;
+}
+
+.plan--highlighted .plan__price {
+    color: white;
+}
+
+#product-overview h1 {
+    position: relative;
+    margin-top: 6%;
+    top: 1rem;
+    left: 1rem;
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
+    font-family: "Franklin Gothic Medium", sans-serif;
+}
+
+.section-title {
+    color: rgb(38, 63, 39);
+    text-align: center;
+}
+
+#key-features {
+    background: rgb(252, 76, 105);
+    margin-top: 3rem;
+    margin-bottom: 0px;
+    padding: 1.2rem;
+}
+
+#key-features .section-title {
+    color: white;
+}
+
+.key-feature__list {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+.key-feature {
+    display: inline-block;
+    padding: 1.2rem;
+    vertical-align: top;
+}
+
+.key-feature__image {
+    width: 128px;
+    height: 128px;
+    border: 2px black solid;
+    border-radius: 50%;
+    background: pink;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.key-feature__description {
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+}
