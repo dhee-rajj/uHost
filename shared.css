@@ -1,10 +1,10 @@
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     margin: 0;
 }
 
 .backdrop {
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     position: fixed;
     z-index: 5;
     width: 100%;
@@ -23,36 +23,41 @@ body {
     z-index: 3;
 }
 
+.main-nav {
+    display: none;
+}
+
+.toggle-button {
+    width: 3rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.toggle-button:focus {
+    outline: none;
+}
+
+.toggle-button__bar {
+    width: 100%;
+    height: 0.2rem;
+    background: rgb(255, 255, 255);
+    display: block;
+    margin: 0.6rem 0;
+}
+
 .main-header__brand {
-    color: white;
-    font-size: 1.2rem;
-    font-weight: bold;
     text-decoration: none;
-    display: inline-block;
-    height: 32px;
 }
 
 .main-header__brand img {
-    height: 64px;
+    height: 4rem;
 }
 
-.main-header > div {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.main-nav {
-    display: inline-block;
-    text-align: right;
-    width: calc(100% - 100px);
-    vertical-align: middle;
-    margin: 0.3rem;
-}
-.main-nav__item {
-    display: inline-block;
-}
-
-.main-nav__item a {
+.main-nav__item a,
+.mobile-nav__item a {
     text-decoration: none;
     margin: 0 1rem;
     color: white;
@@ -60,7 +65,8 @@ body {
     padding: 0.35rem 0;
 }
 
-.main-nav__item--cta a{
+.main-nav__item--cta a,
+.mobile-nav__item--cta a {
     background: white;
     color: black;
     border-radius: 6px;
@@ -68,16 +74,48 @@ body {
 }
 
 .main-nav__item a:hover,
-.main-nav__item a:active {
+.main-nav__item a:active,
+.mobile-nav__item a:hover,
+.mobile-nav__item a:active {
     color: greenyellow;
     border-bottom: solid white 5px;
 }
 
 .main-nav__item--cta a:hover,
-.main-nav__item--cta a:active {
+.main-nav__item--cta a:active,
+.mobile-nav__item--cta a:hover,
+.mobile-nav__item--cta a:active {
     background: greenyellow;
     color: black;
     border-bottom: none;
+}
+
+.mobile-nav {
+    display: none;
+    position: fixed;
+    z-index: 101;
+    top: 0;
+    left: 0;
+    background: rgb(23, 23, 23);
+    width: 80%;
+    height: 100vh;
+}
+
+.mobile-nav__items {
+    width: 90%;
+    height: 100%;
+    list-style: none;
+    margin: 10% auto;
+    padding: 0;
+    text-align: center;
+}
+
+.mobile-nav__item {
+    margin: 2rem 0;
+}
+
+.mobile-nav__item a {
+    font-size: 1.5rem;
 }
 
 .button {
@@ -124,4 +162,32 @@ body {
 .main-footer__link a:active {
     color: greenyellow;
     border-bottom: solid white 1px;
+}
+
+.open {
+    display: block !important;
+}
+
+@media (min-width: 42.5rem) {
+
+    .visbile {
+        display: none;
+    }
+    
+    .main-header > div {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .main-nav {
+        display: inline-block;
+        text-align: right;
+        width: calc(100% - 150px);
+        vertical-align: middle;
+        margin: 0.3rem;
+    }
+
+    .main-nav__item {
+        display: inline-block;
+    }
 }
